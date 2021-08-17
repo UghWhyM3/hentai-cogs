@@ -20,10 +20,10 @@ class Hentai(commands.Cog):
     @commands.command()
     async def hentai(self, ctx):
         """Get hentai"""
-        images = {
+        images = [
             "https://cdn.discordapp.com/attachments/872703562168291362/877037988553572412/sample_ff73b52e844f77b41f27529bbddbbd24.png",
             "https://cdn.discordapp.com/attachments/872703562168291362/876978349975695390/8jcrubk2yph71.png"
-        }
+        ]
         await self.maybe_send_embed("Hentai!", random.choice(images))
 
     async def maybe_send_embed(self, ctx: commands.Context, title: str, url: str):
